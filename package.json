@@ -1,7 +1,7 @@
 {
   "name": "status-bar-customizer",
   "icon": "images/icon.png",
-  "displayName": "Color My Status",
+  "displayName": "Simple Status Bar Customizer",
   "description": "Show custom text in the status bar and change the status bar color.",
   "version": "0.1.0",
   "publisher": "ashisha7i",
@@ -24,11 +24,11 @@
     "commands": [
       {
         "command": "statusBarCustomizer.editText",
-        "title": "Color My Status: Edit Text"
+        "title": "Simple Statusbar Customizer: Edit Text"
       },
       {
         "command": "statusBarCustomizer.changeColor",
-        "title": "Color My Status: Change Color"
+        "title": "Simple Statusbar Customizer: Change Color"
       }
     ],
     "configuration": {

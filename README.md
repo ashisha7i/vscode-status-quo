@@ -1,4 +1,4 @@
-# Status Bar Customizer
+# Simple Status Bar Customizer
 
 Show your own text in the VS Code status bar and give each project its own status bar color. Handy for telling windows apart at a glance (dev vs. prod, client A vs. client B) or just adding a little personality.
 
@@ -22,8 +22,8 @@ Open a folder or workspace, then use either the status bar items or the Command 
 
 | Command | What it does |
 | --- | --- |
-| `Color My Status: Edit Text` | Change the text shown in the status bar |
-| `Color My Status: Change Color` | Pick, enter, or reset the status bar color |
+| `Simple Statusbar Customizer: Edit Text` | Change the text shown in the status bar |
+| `Simple Statusbar Customizer: Change Color` | Pick, enter, or reset the status bar color |
 
 The status bar items only appear when a folder or workspace is open.
 
