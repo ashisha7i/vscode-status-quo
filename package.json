@@ -3,7 +3,7 @@
   "icon": "images/icon.png",
   "displayName": "Status Quo",
   "description": "Show custom text in the status bar and change the status bar color.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "ashisha7i",
   "license": "MIT",
   "repository": {
