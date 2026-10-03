@@ -1,2 +1,5 @@
 *.vsix
-temp/
+.vscode/**
+.ai-memory/
+.aidlc-rule-details/
+aidlc-docs/
