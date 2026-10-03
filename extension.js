@@ -43,7 +43,7 @@ function requireProject() {
   if (hasProject()) return true;
   vscode.window
     .showInformationMessage(
-      'Status Bar Customizer only works when a folder or workspace is open.',
+      'Status Quo only works when a folder or workspace is open.',
       'Open Folder'
     )
     .then((choice) => {
@@ -380,7 +380,7 @@ function activate(context) {
     vscode.commands.registerCommand('statusBarCustomizer.changeColor', safe(changeColor)),
     vscode.workspace.onDidChangeWorkspaceFolders(refresh),
     vscode.workspace.onDidChangeConfiguration((e) => {
-      if (e.affectsConfiguration('statusBarCustomizer.text')) refresh();
+      if (e.affectsConfiguration('statusQuo.text')) refresh();
     })
   );
 }

@@ -1,0 +1,63 @@
+{
+  "source": "cline-extension-remote-config",
+  "version": "v1",
+  "remoteConfig": {
+    "version": "v1",
+    "providerSettings": {
+      "AwsBedrock": {
+        "awsRegion": "us-west-2",
+        "awsUseCrossRegionInference": true,
+        "awsUseGlobalInference": false,
+        "awsBedrockUsePromptCache": true
+      },
+      "Vertex": {
+        "vertexProjectId": "ai-tools-d52b",
+        "vertexRegion": "global"
+      }
+    },
+    "telemetryEnabled": true,
+    "kanbanEnabled": true,
+    "mcpMarketplaceEnabled": true,
+    "allowedMCPServers": [
+      {
+        "id": "github.com/awslabs/mcp/tree/main/src/aws-documentation-mcp-server"
+      },
+      {
+        "id": "github.com/executeautomation/mcp-playwright"
+      }
+    ],
+    "yoloModeAllowed": false,
+    "openTelemetryEnabled": true,
+    "openTelemetryMetricsExporter": "otlp",
+    "openTelemetryLogsExporter": "otlp",
+    "openTelemetryOtlpProtocol": "http/json",
+    "openTelemetryOtlpEndpoint": "https://otlp-gateway-prod-us-east-0.grafana.net/otlp",
+    "openTelemetryOtlpHeaders": {
+      "Authorization": "Basic NzkxNzIzOmdsY19leUp2SWpvaU9UWTRNVEExSWl3aWJpSTZJbk4wWVdOckxUYzVNVGN5TXkxdmRHeHdMWGR5YVhSbExXTnNhVzVsSWl3aWF5STZJa3N6TWpobWRtNUNZekUxUjNFNVVEWTFOVk5KYm5relNTSXNJbTBpT25zaWNpSTZJbkJ5YjJRdGRYTXRaV0Z6ZEMwd0luMTk="
+    },
+    "openTelemetryOtlpMetricsProtocol": "http/json",
+    "openTelemetryOtlpMetricsEndpoint": "https://otlp-gateway-prod-us-east-0.grafana.net/otlp/v1/metrics",
+    "openTelemetryOtlpLogsProtocol": "http/json",
+    "openTelemetryOtlpLogsEndpoint": "https://otlp-gateway-prod-us-east-0.grafana.net/otlp/v1/logs",
+    "openTelemetryOtlpInsecure": false,
+    "openTelemetryLogBatchSize": 50,
+    "openTelemetryLogBatchTimeout": 500,
+    "openTelemetryLogMaxQueueSize": 2048,
+    "enterpriseTelemetry": {
+      "promptUploading": {}
+    }
+  },
+  "managedInstructions": [],
+  "metadata": {
+    "organizationId": "org-01K8497WMRE46TWAE1QPPA2S52",
+    "paths": {
+      "pluginName": "remote-config",
+      "pluginPath": "/Users/510097/Personal/code/vscode-status-quo/.cline/remote-config",
+      "workflowsPath": "/Users/510097/Personal/code/vscode-status-quo/.cline/remote-config/workflows",
+      "skillsPath": "/Users/510097/Personal/code/vscode-status-quo/.cline/remote-config/skills",
+      "bundleCachePath": "/Users/510097/Personal/code/vscode-status-quo/.cline/remote-config/cache/bundle.json",
+      "manifestPath": "/Users/510097/Personal/code/vscode-status-quo/.cline/remote-config/managed.json",
+      "rulesFilePath": "/Users/510097/Personal/code/vscode-status-quo/.cline/remote-config/rules.md"
+    }
+  }
+}

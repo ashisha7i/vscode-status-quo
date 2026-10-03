@@ -1,6 +1,9 @@
-# Simple Status Bar Customizer
+# Status Quo
+_Simple Status Bar Customizer_
 
-Show your own text in the VS Code status bar and give each project its own status bar color. Handy for telling windows apart at a glance (dev vs. prod, client A vs. client B) or just adding a little personality.
+---
+
+Working with multiple VS Code windows at the same time? _Status Quo_ makes it easy to give some personality to each of the window so you can quickly identify them at a glance. Show your own text in the VS Code status bar and give each project its own status bar color. 
 
 ## Features
 
@@ -22,8 +25,8 @@ Open a folder or workspace, then use either the status bar items or the Command 
 
 | Command | What it does |
 | --- | --- |
-| `Rocking Status Bar: Edit Text` | Change the text shown in the status bar |
-| `Rocking Status Bar: Change Color` | Pick, enter, or reset the status bar color |
+| `Status Quo: Edit Text` | Change the text shown in the status bar |
+| `Status Quo: Change Color` | Pick, enter, or reset the status bar color |
 
 The status bar items only appear when a folder or workspace is open.
 
@@ -37,7 +40,7 @@ Everything is saved at the **workspace level only**. Your user (global) settings
 The extension writes two keys:
 
 - `workbench.colorCustomizations` → `statusBar.background` and `statusBar.foreground`
-- `statusBarCustomizer.text`
+- `statusQuo.text`
 
 Other entries in `workbench.colorCustomizations` are left untouched. If you don't want these settings committed, add `.vscode/settings.json` to your `.gitignore`.
 
@@ -45,7 +48,7 @@ Other entries in `workbench.colorCustomizations` are left untouched. If you don'
 
 | Setting | Default | Description |
 | --- | --- | --- |
-| `statusBarCustomizer.text` | `Click to edit` | The text shown in the status bar (workspace setting) |
+| `statusQuo.text` | `Click to edit` | The text shown in the status bar (workspace setting) |
 
 ## Known limitations
 

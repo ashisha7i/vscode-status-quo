@@ -1,9 +1,9 @@
 {
-  "name": "status-bar-customizer",
+  "name": "status-quo",
   "icon": "images/icon.png",
-  "displayName": "Rocking Status Bar",
+  "displayName": "Status Quo",
   "description": "Show custom text in the status bar and change the status bar color.",
-  "version": "0.1.2",
+  "version": "0.0.1",
   "publisher": "ashisha7i",
   "license": "MIT",
   "repository": {
@@ -24,17 +24,17 @@
     "commands": [
       {
         "command": "statusBarCustomizer.editText",
-        "title": "Rocking Status Bar: Edit Text"
+        "title": "Status Quo: Edit Text"
       },
       {
         "command": "statusBarCustomizer.changeColor",
-        "title": "Rocking Status Bar: Change Color"
+        "title": "Status Quo: Change Color"
       }
     ],
     "configuration": {
       "title": "Color My Status",
       "properties": {
-        "statusBarCustomizer.text": {
+        "statusQuo.text": {
           "type": "string",
           "default": "Click to edit",
           "description": "The text shown in the status bar. Saved in the current project (workspace) settings.",
