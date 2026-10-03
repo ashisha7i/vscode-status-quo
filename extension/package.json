@@ -1,0 +1,40 @@
+{
+  "name": "status-bar-customizer",
+  "displayName": "Status Bar Customizer",
+  "description": "Show custom text in the status bar and change the status bar color.",
+  "version": "0.0.3",
+  "publisher": "Ashish Agnihotri",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "statusBarCustomizer.editText",
+        "title": "Status Bar Customizer: Edit Text"
+      },
+      {
+        "command": "statusBarCustomizer.changeColor",
+        "title": "Status Bar Customizer: Change Color"
+      }
+    ],
+    "configuration": {
+      "title": "Status Bar Customizer",
+      "properties": {
+        "statusBarCustomizer.text": {
+          "type": "string",
+          "default": "Click to edit",
+          "description": "The text shown in the status bar. Saved in the current project (workspace) settings.",
+          "scope": "window"
+        }
+      }
+    }
+  }
+}
