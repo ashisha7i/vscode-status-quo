@@ -3,7 +3,7 @@
   "icon": "images/icon.png",
   "displayName": "Simple Status Bar Customizer",
   "description": "Show custom text in the status bar and change the status bar color.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "ashisha7i",
   "license": "MIT",
   "repository": {
