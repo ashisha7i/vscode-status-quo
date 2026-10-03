@@ -1,10 +1,10 @@
 {
   "name": "status-bar-customizer",
   "icon": "images/icon.png",
-  "displayName": "Status Bar Customizer",
+  "displayName": "Color My Status",
   "description": "Show custom text in the status bar and change the status bar color.",
-  "version": "0.0.4",
-  "publisher": "Ashish Agnihotri",
+  "version": "0.0.5",
+  "publisher": "ashisha7i",
   "license": "MIT",
   "repository": {
     "type": "git",
