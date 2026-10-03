@@ -1,9 +1,9 @@
 {
-  "name": "status-bar-customizer",
+  "name": "color-my-status",
   "icon": "images/icon.png",
   "displayName": "Color My Status",
   "description": "Show custom text in the status bar and change the status bar color.",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "publisher": "ashisha7i",
   "license": "MIT",
   "repository": {
@@ -24,15 +24,15 @@
     "commands": [
       {
         "command": "statusBarCustomizer.editText",
-        "title": "Status Bar Customizer: Edit Text"
+        "title": "Color My Status: Edit Text"
       },
       {
         "command": "statusBarCustomizer.changeColor",
-        "title": "Status Bar Customizer: Change Color"
+        "title": "Color My Status: Change Color"
       }
     ],
     "configuration": {
-      "title": "Status Bar Customizer",
+      "title": "Color My Status",
       "properties": {
         "statusBarCustomizer.text": {
           "type": "string",

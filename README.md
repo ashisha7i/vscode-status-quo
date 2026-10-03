@@ -13,14 +13,17 @@ Show your own text in the VS Code status bar and give each project its own statu
 - **Remembers your current color.** The list highlights it, and the color picker and hex input both open on it.
 - **Readable text automatically.** The status bar foreground switches between black and white depending on how light the background is.
 
+## Screenshot
+![Screenshot](images/screenshot.png)
+
 ## Usage
 
 Open a folder or workspace, then use either the status bar items or the Command Palette (`Cmd/Ctrl+Shift+P`):
 
 | Command | What it does |
 | --- | --- |
-| `Status Bar Customizer: Edit Text` | Change the text shown in the status bar |
-| `Status Bar Customizer: Change Color` | Pick, enter, or reset the status bar color |
+| `Color My Status: Edit Text` | Change the text shown in the status bar |
+| `Color My Status: Change Color` | Pick, enter, or reset the status bar color |
 
 The status bar items only appear when a folder or workspace is open.
 
