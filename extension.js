@@ -230,7 +230,7 @@ function getPickerHtml(initialHex, previewText) {
 function openColorPickerPanel(initialHex, previewText) {
   return new Promise((resolve) => {
     const panel = vscode.window.createWebviewPanel(
-      'statusBarCustomizer.picker',
+      'statusQuo.picker',
       'Status Bar Color',
       vscode.ViewColumn.Active,
       { enableScripts: true }
@@ -308,7 +308,7 @@ async function changeColor() {
 
   let hex;
   if (picked.picker) {
-    const text = vscode.workspace.getConfiguration('statusBarCustomizer').get('text', '');
+    const text = vscode.workspace.getConfiguration('statusQuo').get('text', '');
     hex = await openColorPickerPanel(current ?? DEFAULT_PICKER_COLOR, text);
   } else if (picked.custom) {
     hex = await promptForCustomHex(current);
@@ -323,7 +323,7 @@ async function changeColor() {
 async function editText() {
   if (!requireProject()) return;
 
-  const config = vscode.workspace.getConfiguration('statusBarCustomizer');
+  const config = vscode.workspace.getConfiguration('statusQuo');
   const current = config.get('text', '');
 
   const value = await vscode.window.showInputBox({
@@ -343,7 +343,7 @@ function safe(handler) {
     try {
       await handler();
     } catch (err) {
-      vscode.window.showErrorMessage(`Status Bar Customizer: ${err?.message ?? err}`);
+      vscode.window.showErrorMessage(`Status Quo: ${err?.message ?? err}`);
     }
   };
 }
@@ -351,17 +351,17 @@ function safe(handler) {
 function activate(context) {
   // Text item (click to edit)
   const textItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 100);
-  textItem.command = 'statusBarCustomizer.editText';
+  textItem.command = 'statusQuo.editText';
   textItem.tooltip = 'Click to edit this text';
 
   // Palette icon (click to change color)
   const colorItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 99);
   colorItem.text = '$(symbol-color)';
-  colorItem.command = 'statusBarCustomizer.changeColor';
+  colorItem.command = 'statusQuo.changeColor';
   colorItem.tooltip = 'Change status bar color';
 
   const refresh = () => {
-    const text = vscode.workspace.getConfiguration('statusBarCustomizer').get('text', 'Click to edit');
+    const text = vscode.workspace.getConfiguration('statusQuo').get('text', 'Click to edit');
     textItem.text = `$(edit) ${text}`;
     if (hasProject()) {
       textItem.show();
@@ -376,8 +376,8 @@ function activate(context) {
   context.subscriptions.push(
     textItem,
     colorItem,
-    vscode.commands.registerCommand('statusBarCustomizer.editText', safe(editText)),
-    vscode.commands.registerCommand('statusBarCustomizer.changeColor', safe(changeColor)),
+    vscode.commands.registerCommand('statusQuo.editText', safe(editText)),
+    vscode.commands.registerCommand('statusQuo.changeColor', safe(changeColor)),
     vscode.workspace.onDidChangeWorkspaceFolders(refresh),
     vscode.workspace.onDidChangeConfiguration((e) => {
       if (e.affectsConfiguration('statusQuo.text')) refresh();

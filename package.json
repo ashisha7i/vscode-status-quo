@@ -8,7 +8,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ashisha7i/vscode-color-my-status"
+    "url": "https://github.com/ashisha7i/vscode-status-quo"
   },
   "engines": {
     "vscode": "^1.85.0"
@@ -23,16 +23,16 @@
   "contributes": {
     "commands": [
       {
-        "command": "statusBarCustomizer.editText",
+        "command": "statusQuo.editText",
         "title": "Status Quo: Edit Text"
       },
       {
-        "command": "statusBarCustomizer.changeColor",
+        "command": "statusQuo.changeColor",
         "title": "Status Quo: Change Color"
       }
     ],
     "configuration": {
-      "title": "Color My Status",
+      "title": "Status Quo",
       "properties": {
         "statusQuo.text": {
           "type": "string",
