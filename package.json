@@ -1,9 +1,15 @@
 {
   "name": "status-bar-customizer",
+  "icon": "images/icon.png",
   "displayName": "Status Bar Customizer",
   "description": "Show custom text in the status bar and change the status bar color.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "Ashish Agnihotri",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashisha7i/vscode-color-my-status"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
