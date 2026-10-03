@@ -1,7 +1,7 @@
 {
   "name": "status-bar-customizer",
   "icon": "images/icon.png",
-  "displayName": "Simple Status Bar Customizer",
+  "displayName": "Rocking Status Bar",
   "description": "Show custom text in the status bar and change the status bar color.",
   "version": "0.1.1",
   "publisher": "ashisha7i",
@@ -24,11 +24,11 @@
     "commands": [
       {
         "command": "statusBarCustomizer.editText",
-        "title": "Simple Statusbar Customizer: Edit Text"
+        "title": "Rocking Status Bar: Edit Text"
       },
       {
         "command": "statusBarCustomizer.changeColor",
-        "title": "Simple Statusbar Customizer: Change Color"
+        "title": "Rocking Status Bar: Change Color"
       }
     ],
     "configuration": {
