@@ -58,6 +58,29 @@ several undocumented behaviors.
 
 **Deliberately not changed**: `extension.js`. The analysis found no code defects.
 
+## Session 2 — 2026-10-03
+
+**Codicon disclaimer in the color picker + README icon docs**
+
+User reported that `$(coffee)` shows as literal text in the color picker's preview.
+
+**Diagnosis**: not a bug. `$(name)` is VS Code's own icon markup, parsed only by
+native UI surfaces (status bar, quick picks, tree items). A webview is a plain
+sandboxed iframe, so nothing converts the token. `escapeHtml()` was not at fault.
+Rendering real icons would need the codicon font vendored or added as an npm
+dependency, plus `font-src` in the CSP, `localResourceRoots` and `asWebviewUri`.
+
+**Decision**: user chose the minimal route — a disclaimer, no font.
+
+**Changes**:
+- `extension.js` — `.note` CSS plus a disclaimer `<p>` under the preview box in
+  `getPickerHtml()`; preview `margin-bottom` moved 24px → 8px so layout is unchanged
+- `README.md` — codicon feature bullet, a "Using icons" section with examples, and
+  a known limitation about the preview
+
+All 13 icon names cited in the README were verified against the official codicon
+mapping (762 names) — all exist.
+
 ## Current State
 
 Documentation is in sync with the code at v0.0.3. Nothing is half-finished.
@@ -94,3 +117,4 @@ Documentation is in sync with the code at v0.0.3. Nothing is half-finished.
 | Date | Session | Outcome |
 |---|---|---|
 | 2026-10-03 | AI-DLC README sync analysis & full doc refresh | Version bumped to 0.0.3; README/CHANGELOG refreshed; AI-DLC + memory scaffolding established |
+| 2026-10-03 | Codicon disclaimer + README icon docs | Explained why `$(name)` can't render in the webview preview; added disclaimer and documented codicon support |

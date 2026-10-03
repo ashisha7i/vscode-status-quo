@@ -154,7 +154,9 @@ function getPickerHtml(initialHex, previewText) {
   input[type=text]:focus { outline: 1px solid var(--vscode-focusBorder); }
   .hint { opacity: 0.7; font-size: 12px; margin: 0 0 20px; }
   .label { font-size: 12px; opacity: 0.7; margin-bottom: 6px; }
-  #preview { display: flex; align-items: center; height: 24px; padding: 0 10px; font-size: 12px; border-radius: 3px; margin-bottom: 24px; }
+  #preview { display: flex; align-items: center; height: 24px; padding: 0 10px; font-size: 12px; border-radius: 3px; margin-bottom: 8px; }
+  .note { opacity: 0.7; font-size: 12px; margin: 0 0 24px; line-height: 1.4; }
+  .note code { font-family: var(--vscode-editor-font-family); font-size: 11px; }
   .buttons { display: flex; gap: 8px; }
   button { padding: 6px 14px; border: none; border-radius: 2px; cursor: pointer; font-family: inherit;
     color: var(--vscode-button-foreground); background: var(--vscode-button-background); }
@@ -173,6 +175,7 @@ function getPickerHtml(initialHex, previewText) {
   <p class="hint">Click the square to open the picker, or type a hex value.</p>
   <div class="label">Preview</div>
   <div id="preview">${escapeHtml(previewText)}</div>
+  <p class="note">Icons like <code>$(coffee)</code> are shown as plain text in this preview, but they render as icons in the status bar.</p>
   <div class="buttons">
     <button id="apply">Apply</button>
     <button id="cancel" class="secondary">Cancel</button>

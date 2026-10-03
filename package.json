@@ -36,7 +36,7 @@
       "properties": {
         "statusQuo.text": {
           "type": "string",
-          "default": "Click to edit",
+          "default": "Quo 🤘! (Click to edit)",
           "description": "The text shown in the status bar. Saved in the current project (workspace) settings.",
           "scope": "window"
         }
