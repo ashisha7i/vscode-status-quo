@@ -3,7 +3,7 @@
   "icon": "images/icon.png",
   "displayName": "Rocking Status Bar",
   "description": "Show custom text in the status bar and change the status bar color.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "ashisha7i",
   "license": "MIT",
   "repository": {
