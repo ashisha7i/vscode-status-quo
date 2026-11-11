@@ -23,29 +23,34 @@ jobs:
     steps:
       # 1. Checkout source
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # 2. Setup Node.js
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
       # 3. Validate release version
       - name: Validate version
-        if: github.event_name == 'push'
         shell: bash
         run: |
           PACKAGE_VERSION=$(node -p "require('./package.json').version")
-          TAG_VERSION="${GITHUB_REF_NAME#v}"
 
-          echo "Package version: $PACKAGE_VERSION"
-          echo "Git tag version: $TAG_VERSION"
+          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+            TAG_VERSION="${GITHUB_REF_NAME#v}"
 
-          if [ "$PACKAGE_VERSION" != "$TAG_VERSION" ]; then
-            echo "::error::Git tag and package.json version do not match"
-            exit 1
+            echo "Package version: $PACKAGE_VERSION"
+            echo "Git tag version: $TAG_VERSION"
+
+            if [ "$PACKAGE_VERSION" != "$TAG_VERSION" ]; then
+              echo "::error::Git tag and package.json version do not match"
+              exit 1
+            fi
+          else
+            echo "Manual workflow execution"
+            echo "Package version: $PACKAGE_VERSION"
           fi
 
       # 4. Install dependencies
