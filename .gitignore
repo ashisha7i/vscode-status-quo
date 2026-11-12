@@ -3,3 +3,5 @@
 .ai-memory/
 .aidlc-rule-details/
 aidlc-docs/
+/.cline
+/.clinerules
