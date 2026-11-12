@@ -22,7 +22,9 @@ Working with multiple VS Code windows at the same time? _Status Quo_ makes it ea
 
 ## Install
 
-From the Extensions view (`Cmd/Ctrl+Shift+X`), search for **Status Quo**, or install it from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ashisha7i.status-quo).
+From the Extensions view (`Cmd/Ctrl+Shift+X`), search for **Status Quo**, or install it from:
+- Using VS Code? Install from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ashisha7i.status-quo)
+- Using VS Codium? Install from [Open VSX Marketplace](https://open-vsx.org/extension/ashisha7i/status-quo)
 
 ## Usage
 
